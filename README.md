@@ -1,4 +1,4 @@
-# lazygit README
+# Lazygit for VSCode README
 
 This is an extension that allows you to open lazygit in your VSCode instace without a bunch of steps.
 Lazygit is a TUI (Terminal User Interface) git client.

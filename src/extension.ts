@@ -1,33 +1,26 @@
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-  let terminal: vscode.Terminal | undefined;
-  terminal = vscode.window.terminals[0];
   let disposable = vscode.commands.registerCommand(
     "lazygit.openLazygit",
     async () => {
-      if (!terminal) {
-        // If the terminal doesn't exist, create it
-        terminal = vscode.window.createTerminal();
-      }
-      terminal.sendText("lazygit");
+      // Always create a new terminal
+      let terminal = vscode.window.createTerminal();
+
+      terminal.sendText("lazygit && exit");
       terminal.show();
-      // workbench.action.terminal.moveToEditor;
+
+      // Move the terminal to the editor area
       await vscode.commands.executeCommand(
         "workbench.action.terminal.moveToEditor"
       );
-      // console.log(vscode.window.terminals)
-      // if (vscode.window.terminals === undefined || vscode.window.terminals === null ){
-      //   vscode.window.createTerminal();
-      // }
+
+      // Move focus back to the editor view
+      await vscode.commands.executeCommand(
+        "workbench.action.focusActiveEditorGroup"
+      );
     }
   );
-
-  vscode.window.onDidCloseTerminal((closedTerminal) => {
-    if (terminal && terminal.processId === closedTerminal.processId) {
-      terminal = undefined;
-    }
-  });
 
   context.subscriptions.push(disposable);
 }

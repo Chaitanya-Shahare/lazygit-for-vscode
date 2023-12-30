@@ -3,7 +3,11 @@
   "displayName": "Lazygit for VSCode",
   "publisher": "ChaitanyaShahare",
   "description": "",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chaitanya-Shahare/lazygit-for-vscode"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },

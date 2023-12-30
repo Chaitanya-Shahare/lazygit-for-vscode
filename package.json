@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/Chaitanya-Shahare/lazygit-for-vscode"
   },
+  "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.80.0"
   },

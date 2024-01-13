@@ -3,10 +3,16 @@ import * as vscode from "vscode";
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     "lazygit.openLazygit",
-    newLazygitInstance
+    OpenLazygit
   );
 
   context.subscriptions.push(disposable);
+}
+
+async function OpenLazygit() {
+  if (!await focusActiveLazygitInstance()) {
+    await newLazygitInstance();
+  }
 }
 
 /**

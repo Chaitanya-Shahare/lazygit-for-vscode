@@ -9,6 +9,20 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable);
 }
 
+/**
+ * Tries to find an instance and focus on the tab.
+ * @returns If an instance was found and focused
+ */
+async function focusActiveLazygitInstance(): Promise<boolean> {
+  for ( let openTerminal of vscode.window.terminals ) {
+    if (openTerminal.name === "lazygit") {
+      openTerminal.show()
+      return true;
+    }
+  }
+  return false;
+}
+
 async function newLazygitInstance() {
   // Always create a new terminal
   let terminal = vscode.window.createTerminal();

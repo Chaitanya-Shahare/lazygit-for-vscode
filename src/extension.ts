@@ -3,14 +3,14 @@ import * as vscode from "vscode";
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     "lazygit.openLazygit",
-    OpenLazygit
+    openLazygit
   );
 
   context.subscriptions.push(disposable);
 }
 
-async function OpenLazygit() {
-  if (!await focusActiveLazygitInstance()) {
+async function openLazygit() {
+  if (!(await focusActiveLazygitInstance())) {
     await newLazygitInstance();
   }
 }
@@ -20,9 +20,9 @@ async function OpenLazygit() {
  * @returns If an instance was found and focused
  */
 async function focusActiveLazygitInstance(): Promise<boolean> {
-  for ( let openTerminal of vscode.window.terminals ) {
+  for (let openTerminal of vscode.window.terminals) {
     if (openTerminal.name === "lazygit") {
-      openTerminal.show()
+      openTerminal.show();
       return true;
     }
   }
@@ -45,6 +45,11 @@ async function newLazygitInstance() {
   await vscode.commands.executeCommand(
     "workbench.action.focusActiveEditorGroup"
   );
+
+  if (vscode.window.terminals.length > 1) {
+    // Close the terminal if it's not the only one
+    await vscode.commands.executeCommand("workbench.action.togglePanel");
+  }
 }
 
-export function deactivate() { }
+export function deactivate() {}

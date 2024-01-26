@@ -16,18 +16,32 @@ Lazygit is a TUI (Terminal User Interface) git client.
 
 ## Known Issues
 
-- No known issues
+- No known issues, you can open issues here -> https://github.com/Chaitanya-Shahare/lazygit-for-vscode/issues
 - Your contributions in the issues would be appreciated
 
 ## Release Notes
 
-- User can open up lazygit with a keybinding
+- If lazygit is already open, the focus is returned to the terminal, instead of opening a new instance of lazygit.
+- Fixed issue: when lazygit is opened, if any other terminals are active, terminal panel is not opened.
 
 ### 1.0.0
 
 Initial release of lazygit for VSCode
 
-<!-- ### 1.0.1 -->
+### 1.0.1
+
+### 1.0.2
+
+### 1.0.3
+
+### 1.0.4
+
+- After quiting lazygit, the terminal is exited and the focus is returned to the editor
+
+### 1.0.5
+
+- If lazygit is already open, the focus is returned to the terminal, instead of opening a new instance of lazygit.
+- Fixed issue: when lazygit is opened, if any other terminals are active, terminal panel is not opened.
 
 <!-- Fixed issue #.
 

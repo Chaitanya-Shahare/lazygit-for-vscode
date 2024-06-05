@@ -32,7 +32,7 @@ async function focusActiveLazygitInstance(): Promise<boolean> {
 async function newLazygitInstance() {
   // Always create a new terminal
   await vscode.commands.executeCommand(
-    "workbench.action.terminal.new"
+    "workbench.action.terminal.newInActiveWorkspace"
   );
 
   let terminal = vscode.window.activeTerminal!;

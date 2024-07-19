@@ -43,6 +43,11 @@ Initial release of lazygit for VSCode
 - If lazygit is already open, the focus is returned to the terminal, instead of opening a new instance of lazygit.
 - Fixed issue: when lazygit is opened, if any other terminals are active, terminal panel is not opened.
 
+
+### 1.0.6
+
+- Fixed issue: [BUG] Terminal does not move to editor consistently in WSL [#7](https://github.com/Chaitanya-Shahare/lazygit-for-vscode/issues/7) with [PR #9](https://github.com/Chaitanya-Shahare/lazygit-for-vscode/pull/9)
+
 <!-- Fixed issue #.
 
 ### 1.1.0

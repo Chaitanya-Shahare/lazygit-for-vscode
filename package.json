@@ -31,7 +31,17 @@
         "mac": "cmd+g g",
         "linux": "ctrl+g g"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Lazygit",
+      "properties": {
+        "lazygit.startDelay": {
+          "type": "number",
+          "default": 0,
+          "description": "Delay in milliseconds after opening a new terminal before trying to start lazygit"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

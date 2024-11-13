@@ -36,7 +36,7 @@ async function newLazygitInstance() {
   );
 
   let terminal = vscode.window.activeTerminal!;
-  terminal.sendText("lazygit && exit");
+  terminal.sendText("lazygit");
   terminal.show();
 
   // Move the terminal to the editor area

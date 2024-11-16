@@ -49,10 +49,11 @@ async function newLazygitInstance() {
     "workbench.action.focusActiveEditorGroup"
   );
 
-  if (vscode.window.terminals.length > 1) {
-    // Close the terminal if it's not the only one
-    await vscode.commands.executeCommand("workbench.action.togglePanel");
-  }
+  vscode.window.onDidCloseTerminal((closedTerminal) => {
+    if (closedTerminal === terminal) {
+      vscode.commands.executeCommand('workbench.action.focusActiveEditorGroup');
+    }
+  });
 }
 
 export function deactivate() {}

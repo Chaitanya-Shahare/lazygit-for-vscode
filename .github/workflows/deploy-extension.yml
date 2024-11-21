@@ -19,3 +19,18 @@ jobs:
       - run: npm install -g vsce
       - name: Publish
         run: vsce publish -p ${{ secrets.VSCE_PAT }}
+  release-open-vsx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Install dependencies
+        run: npm install
+      - name: Install ovsx (Open VSX CLI)
+        run: npm install -g ovsx
+      - name: Publish to Open VSX
+        run: |
+          npx ovsx publish -p ${{ secrets.OVSX_TOKEN }}

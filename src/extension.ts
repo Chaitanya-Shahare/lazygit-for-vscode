@@ -35,6 +35,11 @@ async function newLazygitInstance() {
     "workbench.action.terminal.newInActiveWorkspace"
   );
 
+  const startDelay = vscode.workspace.getConfiguration("lazygit").get("startDelay");
+  if (typeof startDelay === "number" && startDelay > 0) {
+    await new Promise((resolve) => setTimeout(resolve, startDelay));
+  }
+
   let terminal = vscode.window.activeTerminal!;
   terminal.sendText("lazygit && exit");
   terminal.show();

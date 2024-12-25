@@ -36,7 +36,12 @@ async function newLazygitInstance() {
   );
 
   let terminal = vscode.window.activeTerminal!;
-  terminal.sendText("lazygit && exit");
+
+  // Read the command from the configuration
+  const command = vscode.workspace
+    .getConfiguration()
+    .get<string>("lazygit.command", "lazygit && exit");
+  terminal.sendText(command);
   terminal.show();
 
   // Move the terminal to the editor area

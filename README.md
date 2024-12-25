@@ -43,10 +43,13 @@ Initial release of lazygit for VSCode
 - If lazygit is already open, the focus is returned to the terminal, instead of opening a new instance of lazygit.
 - Fixed issue: when lazygit is opened, if any other terminals are active, terminal panel is not opened.
 
-
 ### 1.0.6
 
 - Fixed issue: [BUG] Terminal does not move to editor consistently in WSL [#7](https://github.com/Chaitanya-Shahare/lazygit-for-vscode/issues/7) with [PR #9](https://github.com/Chaitanya-Shahare/lazygit-for-vscode/pull/9)
+
+### 1.0.7
+
+- Feature: Add custom command for powershell & other shells [#15](https://github.com/Chaitanya-Shahare/lazygit-for-vscode/issues/15), user can now add custom command for powershell and other shells in the settings.
 
 <!-- Fixed issue #.
 
@@ -60,20 +63,20 @@ Added features X, Y, and Z.
 
 Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
 ## Working with Markdown
 
 You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
+- Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
+- Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
 
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
--->
+- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+  -->
 
 **Enjoy!**

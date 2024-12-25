@@ -3,7 +3,7 @@
   "displayName": "Lazygit for VSCode",
   "publisher": "ChaitanyaShahare",
   "description": "",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/Chaitanya-Shahare/lazygit-for-vscode"
@@ -31,7 +31,18 @@
         "mac": "cmd+g g",
         "linux": "ctrl+g g"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Lazygit Configuration",
+      "properties": {
+        "lazygit.command": {
+          "type": "string",
+          "default": "lazygit && exit",
+          "description": "Command to run Lazygit in the terminal (depending on operating system & shell)"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

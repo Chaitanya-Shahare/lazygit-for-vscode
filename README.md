@@ -14,6 +14,21 @@ Lazygit is a TUI (Terminal User Interface) git client.
 - Lazygit must be installed on your system.
 - for lazygit installation refer -> https://github.com/jesseduffield/lazygit
 
+## Configuration
+
+Set the following in your [LazyGit config](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md) for VSCode support:
+
+- Linux: `~/.config/lazygit/config.yml`
+- MacOS: `~/Library/Application\ Support/lazygit/config.yml`
+- Windows: `%LOCALAPPDATA%\lazygit\config.yml` (default location, but it will also be found in `%APPDATA%\lazygit\config.yml`
+
+```yaml
+os:
+  editPreset: "vscode"
+```
+
+This allows a pretty slick experience opening windows & files on specific changes with `e` and `o` in LazyGit.
+
 ## Known Issues
 
 - No known issues, you can open issues here -> https://github.com/Chaitanya-Shahare/lazygit-for-vscode/issues

@@ -40,6 +40,11 @@
           "type": "string",
           "default": "lazygit && exit",
           "description": "Command to run Lazygit in the terminal (depending on operating system & shell)"
+        },
+        "lazygit.openInEditor": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to open Lazygit in the editor or in the terminal"
         }
       }
     }

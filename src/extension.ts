@@ -44,6 +44,15 @@ async function newLazygitInstance() {
   terminal.sendText(command);
   terminal.show();
 
+
+  const openInEditor = vscode.workspace
+    .getConfiguration()
+    .get<boolean>("lazygit.openInEditor", true);
+
+  if (!openInEditor) {
+    return;
+  }
+
   // Move the terminal to the editor area
   await vscode.commands.executeCommand(
     "workbench.action.terminal.moveToEditor"
@@ -60,4 +69,4 @@ async function newLazygitInstance() {
   }
 }
 
-export function deactivate() {}
+export function deactivate() { }

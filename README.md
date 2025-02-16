@@ -94,4 +94,8 @@ You can author your README using Visual Studio Code. Here are some useful editor
 - [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
   -->
 
+## Contributing
+
+- If you have any suggestions or issues, feel free to open an issue or a PR against the `main` branch.
+
 **Enjoy!**
